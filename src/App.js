@@ -4,8 +4,8 @@ function App() {
     <div className="App">
       <div className="container">
       <h1>hellow welcome to react</h1>
-      <Header title="myHeading" id="1"/> 
-      <Header/> 
+      <Header title="myHeading" id={1}/> 
+      <Header title="secondaryprop"/> 
       <Header/> 
       <Header/> 
       </div>
