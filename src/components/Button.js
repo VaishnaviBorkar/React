@@ -1,6 +1,7 @@
 // Lets create a button component 
 import react from "react"
-const Button =(props)=>{
-    return <button style={{backgrondColor:props.backgrondColor,color:props.color}}>{props.text}</button>
+// destructuring props:only get requiered props as an argument
+const Button =({color,text})=>{
+    return <button style={{color:color}}>{text}</button>
 }
 export default Button;
