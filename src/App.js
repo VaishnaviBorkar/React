@@ -46,24 +46,36 @@ this.setState({
   console.log(this.state.person);
   // values changed in viewport only not in actual Dom.
   }
-changeName=(newName)=>{
+// changeName=(newName)=>{
+//   this.setState({
+//     person:[
+//       {name:newName,age:21},
+//       {name:"Mona",age:20},
+//       {name:"yogita",age:24}
+//     ]}
+//     )
+//   }
+//pass an  event parameter
+changeName=(event)=>{
   this.setState({
-    person:[
-      {name:newName,age:21},
-      {name:"Mona",age:20},
-      {name:"yogita",age:24}
-    ]}
-    )
-  }
+    person:[{
+      name: event.target.value,age:65},
+    {name: event.target.value,age:20},
+    {name:"yogita",age:24}]
+  })
+}
 
   render(){
     return(
       <div>
       <h2>class base component</h2>
       
-      <Person name={this.state.person[0].name} age={this.state.person[0].age}
-      myclick={this.changeName.bind(this, "Loyal")}/>
-      <Person name={this.state.person[1].name} age={this.state.person[1].age}/>
+      <Person name={this.state.person[0].name}
+       age={this.state.person[0].age}
+      change={this.changeName}/>
+      <Person name={this.state.person[1].name} 
+      age={this.state.person[1].age}
+      change={this.changeName}/>
       <Person name={this.state.person[2].name} age={this.state.person[2].age}/>
       <button onClick={this.changeState}>Change state</button>
       </div>
