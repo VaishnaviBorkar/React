@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Person = ({name,age}) => {
+const Person = ({name,age,myclick}) => {
     return (
         <div>
-            <p className="lead">Hellow my name is {name} and i am {age} years old</p>
+            <p onClick={myclick} className="lead" >Hellow my name is {name} and i am {age} years old</p>
         </div>
     )
 }
